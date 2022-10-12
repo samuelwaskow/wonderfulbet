@@ -1,0 +1,14 @@
+syntax = "proto3";
+package wonderfulbet.wonderfulbet;
+
+import "gogoproto/gogo.proto";
+import "wonderfulbet/params.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "wonderfulbet/x/wonderfulbet/types";
+
+// GenesisState defines the wonderfulbet module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
+}
